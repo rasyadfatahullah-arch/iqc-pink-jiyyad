@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IQC Pink Generator - by JIYYAD TOOLS</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    IQC PINK
+  </div>
+  <div class="owner">BY JIYYAD TOOLS</div>
+</nav>
+
+<main>
+  <!-- FORM -->
+  <div class="panel">
+    <div class="panel-title">
+      <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+      Generator Settings
+    </div>
+
+    <div class="field">
+      <label>Pesan / Teks</label>
+      <textarea id="text" placeholder="Keren kan? join saluran jiyyad...">Keren kan? join saluran jiyyad😜</textarea>
+    </div>
+
+    <div class="grid-2">
+      <div class="field">
+        <label>Waktu Atas</label>
+        <input type="text" id="time" value="12.02">
+      </div>
+      <div class="field">
+        <label>Waktu Bubble</label>
+        <input type="text" id="bubbleTime" value="12.04">
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="field">
+        <label>Jaringan</label>
+        <select id="network">
+          <option value="5G">5G</option>
+          <option value="4G">4G</option>
+          <option value="LTE">LTE</option>
+          <option value="Wi-Fi">Wi-Fi</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Sinyal (1-4)</label>
+        <select id="signal">
+          <option value="4">4 Bar</option>
+          <option value="3" selected>3 Bar</option>
+          <option value="2">2 Bar</option>
+          <option value="1">1 Bar</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="field">
+        <label>Baterai (%)</label>
+        <input type="number" id="battery" value="54" min="0" max="100">
+      </div>
+      <div class="field">
+        <label>Sedang Cas?</label>
+        <select id="charging">
+          <option value="true">Ya (True)</option>
+          <option value="false">Tidak (False)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Reaksi (Pisahkan dengan koma)</label>
+      <input type="text" id="reactions" value="😹,🤩,👍,😏,🗿,🤣,🤤">
+    </div>
+
+    <button class="btn-submit" id="submitBtn">
+      <svg viewBox="0 0 24 24" id="btnIcon" style="width:20px;height:20px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <span id="btnText">Generate Image</span>
+    </button>
+  </div>
+
+  <!-- PREVIEW -->
+  <div class="preview-panel" id="previewPanel">
+    <div class="placeholder" id="placeholder">
+      <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+      <p>Hasil gambar akan muncul di sini</p>
+    </div>
+    <div class="spinner" id="loadingSpinner" style="display:none;"></div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
